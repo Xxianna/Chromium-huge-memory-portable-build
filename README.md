@@ -63,8 +63,7 @@ cd ..\..\..
 $env:vs2022_install = "C:\Program Files\Microsoft Visual Studio\18\Community"
 
 # 8. 配置构建
-gn gen out\Release --args="is_component_build = true is_debug = false symbol_level = 0 blink_symbol_level = 0
-v8_symbol_level = 0"
+gn gen out\Release --args="is_component_build = false is_debug = false symbol_level = 0 blink_symbol_level = 0 v8_symbol_level = 0 v8_enable_pointer_compression = false"
 
 # 9. 编译
 autoninja -C out\Release chrome
