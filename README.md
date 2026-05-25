@@ -12,6 +12,12 @@ Chromium 146 portable build with pointer compression disabled. Runs from any dir
 - Using existing data from a pointer-compressed Chromium may cause crashes. Clear browser data, reset settings, or use a custom user data directory as specified in the command.
 - Initial access to Google may be flagged as bot activity. Normal access resumes after passing verification tests.
 
+
+**为何选择 146 版本？**
+**Why version 146?**
+- 最新版 150 在 [V8](https://github.com/v8/v8) 关闭指针压缩时存在 Bug。由于我不打算修复 V8，因此采用了最新 Node.js 所绑定的版本（Node.js 默认关闭指针压缩）。
+- The latest version 150 has a bug when pointer compression is disabled in [V8](https://github.com/v8/v8). Since I prefer not to patch V8, I adopted the version bundled with the latest Node.js, which runs with pointer compression disabled.
+
 ## Base Version
 - **Chromium**: M146 (`146.0.7680.212`)
 - **Git commit**: `fea2e0ad837e0`
